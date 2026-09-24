@@ -1,0 +1,12 @@
+@charset "UTF-8";
+/* パターンC：すべて明朝（見出し＝しっぽり明朝B1／本文＝Noto Serif JP）
+   印象：和・庭園・上質。造園らしさは一番強いが、長文はやや読みにくい。 */
+:root{
+  --font-body:"Noto Serif JP","Hiragino Mincho ProN","Yu Mincho",serif;
+  --font-head:"Shippori Mincho B1","Hiragino Mincho ProN","Yu Mincho",serif;
+  --head-weight:600;
+}
+body{line-height:2.05;}
+.hero__title{letter-spacing:.1em;}
+.sec-title{letter-spacing:.14em;}
+.card__text,.works__item figcaption,.sec-desc,.form,.footer__addr{letter-spacing:.02em;}

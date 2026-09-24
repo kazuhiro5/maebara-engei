@@ -1,0 +1,13 @@
+@charset "UTF-8";
+/* パターンB：すべてゴシック（Noto Sans JP）
+   印象：現代的・読みやすい・法人向け。公共工事や採用の見え方が良い。 */
+:root{
+  --font-body:"Noto Sans JP","Hiragino Kaku Gothic ProN","Yu Gothic",sans-serif;
+  --font-head:"Noto Sans JP","Hiragino Kaku Gothic ProN","Yu Gothic",sans-serif;
+  --head-weight:700;
+}
+.hero__title{letter-spacing:.02em;line-height:1.45;}
+.sec-title{letter-spacing:.06em;}
+.logo__main{letter-spacing:.06em;}
+.facts__num{font-weight:700;}
+.contact__tel{font-weight:700;letter-spacing:.01em;}

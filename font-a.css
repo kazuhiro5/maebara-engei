@@ -1,0 +1,8 @@
+@charset "UTF-8";
+/* パターンA：明朝の見出し × ゴシックの本文（端末の標準フォント）
+   印象：老舗・落ち着き・堅実。Webフォントを読み込まないので表示が最速。 */
+:root{
+  --font-body:"Hiragino Kaku Gothic ProN","Yu Gothic","YuGothic","Meiryo",system-ui,sans-serif;
+  --font-head:"Hiragino Mincho ProN","Yu Mincho","YuMincho",serif;
+  --head-weight:600;
+}

@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>レイアウトの見本｜株式会社前原園芸</title>
+<style>
+/* ============================================================
+   レイアウト選びのための見本ページ
+   ・他社サイトの画像は置かない（骨格の図＋実物へのリンクだけ）
+   ・トップページからはリンクしていない。URLを直接開いて使う
+   ・レイアウトが決まったら、このファイルは削除する
+   ============================================================ */
+:root{
+  --green:#2f6b3f; --green-dark:#20492b; --pale:#f2f7f2;
+  --ink:#1f2421; --muted:#6b7a6e; --line:#dfe5e0;
+}
+*,*::before,*::after{box-sizing:border-box;}
+body{
+  margin:0;background:#fff;color:var(--ink);
+  font-family:"Hiragino Kaku Gothic ProN","Yu Gothic","Meiryo",sans-serif;
+  font-size:16px;line-height:1.85;
+}
+.wrap{width:min(100% - 40px,1080px);margin-inline:auto;}
+h1,h2,h3{font-family:"Hiragino Mincho ProN","Yu Mincho",serif;font-weight:600;line-height:1.5;margin:0;}
+
+.head{background:var(--green-dark);color:#fff;padding:44px 0 40px;}
+.head h1{font-size:clamp(22px,3.4vw,30px);letter-spacing:.08em;}
+.head p{margin:16px 0 0;font-size:15px;line-height:1.95;color:rgba(255,255,255,.9);}
+.head .strong{background:rgba(255,255,255,.16);padding:2px 7px;}
+
+.intro{padding:40px 0 8px;}
+.intro p{margin:0 0 10px;}
+
+.list{padding:24px 0 80px;display:flex;flex-direction:column;gap:26px;}
+
+.item{border:1px solid var(--line);display:grid;grid-template-columns:300px 1fr;}
+.item__fig{background:var(--pale);border-right:1px solid var(--line);padding:22px;display:grid;place-items:center;}
+.item__body{padding:26px 30px;}
+.item__no{
+  display:inline-block;background:var(--green);color:#fff;font-size:12px;
+  letter-spacing:.14em;padding:3px 12px;margin-bottom:12px;
+}
+.item__title{font-size:21px;letter-spacing:.06em;}
+.item__lead{margin:12px 0 0;font-size:15px;}
+.item__for{
+  margin:16px 0 0;padding:12px 15px;background:var(--pale);font-size:14px;line-height:1.85;
+  border-left:3px solid var(--green);
+}
+.item__link{
+  display:inline-block;margin-top:18px;font-size:14px;color:var(--green-dark);
+  border-bottom:1px solid var(--green);padding-bottom:2px;text-decoration:none;
+}
+.item__link:hover{color:var(--green);}
+.item__link::after{content:" →";}
+
+/* ── 骨格の図（灰色の箱だけで構成を表す） ───────────── */
+.wf{width:100%;max-width:250px;background:#fff;border:1px solid #cfd8d1;padding:7px;display:flex;flex-direction:column;gap:5px;}
+.wf i{display:block;background:#dde4de;border-radius:1px;}
+.wf .bar{height:11px;background:#c2cdc5;}
+.wf .hero{height:54px;background:linear-gradient(135deg,#9fb3a4,#c3cfc6);position:relative;}
+.wf .hero.txt::after{content:"";position:absolute;left:8px;top:18px;width:58%;height:7px;background:rgba(255,255,255,.85);}
+.wf .hero.big{height:76px;}
+.wf .row{display:flex;gap:5px;}
+.wf .row > i{flex:1;height:30px;}
+.wf .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:4px;}
+.wf .grid > i{height:26px;}
+.wf .grid.g2{grid-template-columns:repeat(2,1fr);}
+.wf .tile{display:grid;grid-template-columns:repeat(4,1fr);gap:3px;}
+.wf .tile > i{height:22px;background:#b5c4ba;}
+.wf .band{height:30px;background:#9fb3a4;}
+.wf .txt-l{height:7px;background:#d5ddd8;}
+.wf .txt-s{height:5px;width:60%;background:#e2e8e3;}
+.wf .big-type{height:26px;background:#b9c6bd;width:78%;}
+.wf .half{display:flex;gap:5px;}
+.wf .half > i{flex:1;height:44px;}
+.wf .steps{display:flex;gap:4px;}
+.wf .steps > i{flex:1;height:18px;background:#cdd8d0;}
+.wf .foot{height:16px;background:#8fa495;}
+
+.note{background:var(--pale);border:1px solid var(--line);padding:22px 26px;margin:0 0 30px;}
+.note h3{font-size:17px;margin-bottom:8px;}
+.note p{margin:6px 0 0;font-size:14.5px;}
+
+.backlink{display:inline-block;margin:0 0 30px;font-size:14px;color:var(--green-dark);border-bottom:1px solid var(--green);text-decoration:none;padding-bottom:2px;}
+
+@media (max-width:760px){
+  .item{grid-template-columns:1fr;}
+  .item__fig{border-right:0;border-bottom:1px solid var(--line);}
+  .item__body{padding:22px;}
+}
+</style>
+</head>
+<body>
+
+<header class="head">
+  <div class="wrap">
+    <h1>レイアウトの見本</h1>
+    <p>
+      下の5つは、実際の造園会社のホームページを<span class="strong">骨組みだけの形に単純化した図</span>です。<br>
+      <strong>この中で「これが近い」と思うものを指差してください。</strong>そこから細かい調整に入ります。
+    </p>
+  </div>
+</header>
+
+<div class="wrap intro">
+  <a class="backlink" href="index.html">← 前原園芸のデモ版に戻る</a>
+  <div class="note">
+    <h3>選ぶときの基準は、見た目の好みよりも「誰に見せたいか」です</h3>
+    <p>・<strong>個人のお宅の剪定や庭づくり</strong>を増やしたい → ②③⑤ が向いています</p>
+    <p>・<strong>公共工事・元請けからの信用・求人</strong>を重視したい → ①④ が向いています</p>
+    <p>・図はあくまで骨組みです。<strong>色や写真は、どの形でも自由に変えられます。</strong></p>
+  </div>
+</div>
+
+<main class="wrap list">
+
+  <!-- ① 総合型（現在のデモ） -->
+  <article class="item">
+    <div class="item__fig">
+      <div class="wf">
+        <i class="bar"></i>
+        <i class="hero txt"></i>
+        <div class="row"><i></i><i></i></div>
+        <div class="grid"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+        <i class="band"></i>
+        <div class="half"><i></i><i></i></div>
+        <i class="foot"></i>
+      </div>
+    </div>
+    <div class="item__body">
+      <span class="item__no">案 1 ・ 現在のデモ版</span>
+      <h2 class="item__title">総合型</h2>
+      <p class="item__lead">
+        写真の帯 → 会社の紹介 → 事業内容を6つのカードで → 施工事例 → 会社概要 → 地図とお問い合わせ。
+        <strong>上から順に読めば会社の全体像が分かる</strong>、いちばん標準的な形です。
+      </p>
+      <p class="item__for">個人のお客さんにも、法人・官公庁にも、どちらにも無難に効きます。迷ったらこれです。</p>
+      <a class="item__link" href="https://www.rinkasa.jp/" target="_blank" rel="noopener">実物を見る（林業笠原造園・長野）</a>
+    </div>
+  </article>
+
+  <!-- ② 施工事例 先出し（写真タイル型） -->
+  <article class="item">
+    <div class="item__fig">
+      <div class="wf">
+        <i class="bar"></i>
+        <i class="hero big txt"></i>
+        <div class="tile"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+        <i class="txt-l"></i><i class="txt-s"></i>
+        <div class="grid g2"><i></i><i></i></div>
+        <i class="foot"></i>
+      </div>
+    </div>
+    <div class="item__body">
+      <span class="item__no">案 2</span>
+      <h2 class="item__title">施工事例 先出し（写真タイル型）</h2>
+      <p class="item__lead">
+        入ってすぐ、<strong>施工写真をタイル状にびっしり並べます。</strong>
+        文章より先に「どんな庭を作る会社か」が目に入る形です。
+      </p>
+      <p class="item__for">個人のお客さん向き。造園は写真が最大の判断材料なので、写真が多いほど強くなります。<br>
+        <strong>ただし写真が10枚以上ないと、スカスカに見えます。</strong></p>
+      <a class="item__link" href="https://kosugi-zohen.co.jp/" target="_blank" rel="noopener">実物を見る（小杉造園・東京世田谷）</a>
+    </div>
+  </article>
+
+  <!-- ③ 大きな文字＋非対称 -->
+  <article class="item">
+    <div class="item__fig">
+      <div class="wf">
+        <i class="bar"></i>
+        <i class="big-type"></i>
+        <div class="half"><i></i><i style="margin-top:14px"></i></div>
+        <i class="txt-s"></i>
+        <div class="half"><i style="margin-top:10px"></i><i></i></div>
+        <i class="foot"></i>
+      </div>
+    </div>
+    <div class="item__body">
+      <span class="item__no">案 3</span>
+      <h2 class="item__title">大きな文字＋非対称</h2>
+      <p class="item__lead">
+        「景色づくり」のような<strong>大きな言葉を主役にして、写真をわざと左右にずらして置きます。</strong>
+        余白を大きく取り、ゆっくり読ませる形です。
+      </p>
+      <p class="item__for">こだわりのある個人邸向き。おしゃれに見えますが、<strong>情報量は少なくなります。</strong>
+        載せたいことが多い場合は向きません。</p>
+      <a class="item__link" href="https://www.kk-saffron.com/" target="_blank" rel="noopener">実物を見る（景色工房サフラン・神奈川厚木）</a>
+    </div>
+  </article>
+
+  <!-- ④ 実績・信頼型 -->
+  <article class="item">
+    <div class="item__fig">
+      <div class="wf">
+        <i class="bar"></i>
+        <i class="hero txt"></i>
+        <div class="steps"><i></i><i></i><i></i><i></i></div>
+        <div class="grid g2"><i></i><i></i><i></i><i></i></div>
+        <i class="txt-l"></i><i class="txt-s"></i>
+        <i class="foot"></i>
+      </div>
+    </div>
+    <div class="item__body">
+      <span class="item__no">案 4</span>
+      <h2 class="item__title">実績・信頼型</h2>
+      <p class="item__lead">
+        <strong>創業49年・建設業許可・公共工事の実績・受賞やメディア掲載</strong>を、
+        バッジやバナーにして上のほうに並べます。数字と実績で信用を積み上げる形です。
+      </p>
+      <p class="item__for">法人・官公庁・求人向き。<strong>前原園芸さんの「創業49年」が最も活きる形</strong>です。<br>
+        ただし載せる実績の材料（許可番号・工事の実績・受賞など）が必要になります。</p>
+      <a class="item__link" href="https://www.morizouen.co.jp/" target="_blank" rel="noopener">実物を見る（森造園・札幌）</a>
+    </div>
+  </article>
+
+  <!-- ⑤ 悩み解決型 -->
+  <article class="item">
+    <div class="item__fig">
+      <div class="wf">
+        <i class="bar"></i>
+        <i class="hero txt"></i>
+        <i class="txt-l"></i>
+        <div class="grid"><i></i><i></i><i></i></div>
+        <div class="steps"><i></i><i></i><i></i><i></i></div>
+        <div class="grid g2"><i></i><i></i></div>
+        <i class="foot"></i>
+      </div>
+    </div>
+    <div class="item__body">
+      <span class="item__no">案 5</span>
+      <h2 class="item__title">悩み解決型</h2>
+      <p class="item__lead">
+        「お庭のことは、全部おまかせください」のように<strong>ひとことで約束して、
+        選ばれる理由を3つ、依頼の流れを4段階</strong>で見せます。
+      </p>
+      <p class="item__for">個人のお客さん向き。<strong>「植木屋に頼むのは初めてで、いくらかかるか分からない」という不安を消す</strong>のが目的の形です。
+        問い合わせを増やしたい場合、いちばん効きます。</p>
+      <a class="item__link" href="https://www.niwatoku.net/" target="_blank" rel="noopener">実物を見る（庭徳藤原造園・愛知）</a>
+    </div>
+  </article>
+
+</main>
+
+</body>
+</html>
