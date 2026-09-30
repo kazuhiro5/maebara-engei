@@ -53,6 +53,9 @@ h1,h2,h3{font-family:"Hiragino Mincho ProN","Yu Mincho",serif;font-weight:600;li
   border-bottom:1px solid var(--green);padding-bottom:2px;text-decoration:none;
 }
 .item__link:hover{color:var(--green);}
+.item__link--own{display:inline-block;margin-right:18px;background:var(--green);color:#fff;border:0;padding:8px 14px;border-radius:3px;}
+.item__link--own:hover{background:var(--green-dark);color:#fff;}
+.item__link--own::after{content:" →";}
 .item__link::after{content:" →";}
 
 /* ── 骨格の図（灰色の箱だけで構成を表す） ───────────── */
@@ -99,7 +102,7 @@ h1,h2,h3{font-family:"Hiragino Mincho ProN","Yu Mincho",serif;font-weight:600;li
     <h1>レイアウトの見本</h1>
     <p>
       下の5つは、実際の造園会社のホームページを<span class="strong">骨組みだけの形に単純化した図</span>です。<br>
-      <strong>この中で「これが近い」と思うものを指差してください。</strong>そこから細かい調整に入ります。
+      <strong>この中で「これが近い」と思うものを指差してください。</strong>そこから細かい調整に入ります。<br>5案とも<strong>実際の画面を用意してあります</strong>（「この案の画面を見る」から）。
     </p>
   </div>
 </header>
@@ -130,13 +133,14 @@ h1,h2,h3{font-family:"Hiragino Mincho ProN","Yu Mincho",serif;font-weight:600;li
       </div>
     </div>
     <div class="item__body">
-      <span class="item__no">案 1 ・ 現在のデモ版</span>
+      <span class="item__no">案 1</span>
       <h2 class="item__title">総合型</h2>
       <p class="item__lead">
         写真の帯 → 会社の紹介 → 事業内容を6つのカードで → 施工事例 → 会社概要 → 地図とお問い合わせ。
         <strong>上から順に読めば会社の全体像が分かる</strong>、いちばん標準的な形です。
       </p>
       <p class="item__for">個人のお客さんにも、法人・官公庁にも、どちらにも無難に効きます。迷ったらこれです。</p>
+      <a class="item__link item__link--own" href="index.html">この案の画面を見る</a>
       <a class="item__link" href="https://www.rinkasa.jp/" target="_blank" rel="noopener">実物を見る（林業笠原造園・長野）</a>
     </div>
   </article>
@@ -162,6 +166,7 @@ h1,h2,h3{font-family:"Hiragino Mincho ProN","Yu Mincho",serif;font-weight:600;li
       </p>
       <p class="item__for">個人のお客さん向き。造園は写真が最大の判断材料なので、写真が多いほど強くなります。<br>
         <strong>ただし写真が10枚以上ないと、スカスカに見えます。</strong></p>
+      <a class="item__link item__link--own" href="pattern2.html">この案の画面を見る</a>
       <a class="item__link" href="https://kosugi-zohen.co.jp/" target="_blank" rel="noopener">実物を見る（小杉造園・東京世田谷）</a>
     </div>
   </article>
@@ -187,6 +192,7 @@ h1,h2,h3{font-family:"Hiragino Mincho ProN","Yu Mincho",serif;font-weight:600;li
       </p>
       <p class="item__for">こだわりのある個人邸向き。おしゃれに見えますが、<strong>情報量は少なくなります。</strong>
         載せたいことが多い場合は向きません。</p>
+      <a class="item__link item__link--own" href="pattern3.html">この案の画面を見る</a>
       <a class="item__link" href="https://www.kk-saffron.com/" target="_blank" rel="noopener">実物を見る（景色工房サフラン・神奈川厚木）</a>
     </div>
   </article>
@@ -212,6 +218,7 @@ h1,h2,h3{font-family:"Hiragino Mincho ProN","Yu Mincho",serif;font-weight:600;li
       </p>
       <p class="item__for">法人・官公庁・求人向き。<strong>前原園芸さんの「創業49年」が最も活きる形</strong>です。<br>
         ただし載せる実績の材料（許可番号・工事の実績・受賞など）が必要になります。</p>
+      <a class="item__link item__link--own" href="pattern4.html">この案の画面を見る</a>
       <a class="item__link" href="https://www.morizouen.co.jp/" target="_blank" rel="noopener">実物を見る（森造園・札幌）</a>
     </div>
   </article>
@@ -238,6 +245,7 @@ h1,h2,h3{font-family:"Hiragino Mincho ProN","Yu Mincho",serif;font-weight:600;li
       </p>
       <p class="item__for">個人のお客さん向き。<strong>「植木屋に頼むのは初めてで、いくらかかるか分からない」という不安を消す</strong>のが目的の形です。
         問い合わせを増やしたい場合、いちばん効きます。</p>
+      <a class="item__link item__link--own" href="pattern5.html">この案の画面を見る</a>
       <a class="item__link" href="https://www.niwatoku.net/" target="_blank" rel="noopener">実物を見る（庭徳藤原造園・愛知）</a>
     </div>
   </article>

@@ -18,6 +18,7 @@
 <link rel="stylesheet" href="color-a.css" id="colorset">
 <link rel="stylesheet" href="font-a.css" id="fontset">
 <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="pick.css">
 </head>
 <body>
 
@@ -234,8 +235,11 @@
 <div class="pick" id="pick">
   <div class="pick__row">
     <span class="pick__label">案</span>
-    <span class="pick__link is-on">A 標準</span>
-    <a class="pick__link" href="pattern2.html">B 写真先出し</a>
+    <span class="pick__link is-on">1 標準</span>
+    <a class="pick__link" data-plan href="pattern2.html">2 写真先出し</a>
+    <a class="pick__link" data-plan href="pattern3.html">3 大きな文字</a>
+    <a class="pick__link" data-plan href="pattern4.html">4 実績・信頼</a>
+    <a class="pick__link" data-plan href="pattern5.html">5 悩み解決</a>
   </div>
   <div class="pick__row">
     <span class="pick__label">色</span>
@@ -253,51 +257,7 @@
   </div>
 </div>
 
-<script>
-// ★デモ専用：色とフォントの切り替え（?color=c&font=b のようにURLでも指定できる）
-(function () {
-  var box = document.getElementById('pick');
-  var sets = {
-    color: { link: document.getElementById('colorset'), keys: 'abcde', attr: 'color' },
-    font:  { link: document.getElementById('fontset'),  keys: 'abc',   attr: 'font'  }
-  };
-  function apply(kind, k) {
-    var set = sets[kind];
-    if (set.keys.indexOf(k) < 0) k = 'a';
-    set.link.href = kind + '-' + k + '.css';
-    Array.prototype.forEach.call(box.querySelectorAll('[data-' + set.attr + ']'), function (b) {
-      b.classList.toggle('is-on', b.dataset[set.attr] === k);
-    });
-    try { localStorage.setItem('maebara-' + kind, k); } catch (e) {}
-  }
-  var q = new URLSearchParams(location.search);
-  Object.keys(sets).forEach(function (kind) {
-    var saved = null;
-    try { saved = localStorage.getItem('maebara-' + kind); } catch (e) {}
-    apply(kind, q.get(kind) || saved || 'a');
-  });
-  box.addEventListener('click', function (e) {
-    var d = e.target.dataset || {};
-    if (d.color) apply('color', d.color);
-    if (d.font)  apply('font',  d.font);
-  });
-})();
-</script>
-
-<script>
-// スマートフォンのメニュー開閉
-(function () {
-  var b = document.getElementById('burger'), n = document.getElementById('nav');
-  b.addEventListener('click', function () {
-    var open = n.classList.toggle('is-open');
-    b.classList.toggle('is-open', open);
-    b.setAttribute('aria-expanded', open);
-  });
-  n.addEventListener('click', function (e) {
-    if (e.target.tagName === 'A') { n.classList.remove('is-open'); b.classList.remove('is-open'); }
-  });
-})();
-</script>
+<script src="pick.js"></script>
 
 </body>
 </html>
